@@ -1,0 +1,46 @@
+/*think of CSS as boxes on top of boxes*/
+/*each element is a box, you can see this box by setting a value for background-color*/
+/*calling on the HTML element allows us declare default values we want the site to have*/
+html {
+    font-size: 10px; /*we set the font-size value of the whole site to 10 pixels*/
+    font-family: "Bebas Neue", serif; /*we set the font-family value of the whole site to Bebas Neue */
+    background-color: #000000; /*we set the background color of the whole site to the value specified, in this case black*/
+}
+/*We want to style our h1*/
+h1 {
+    font-size: 60px; /*set font size to 60 pixels*/
+    text-align: center; /*align element to be centered within it's container, in this case the <body> is the container*/
+    margin: 0; /*we waant no extra space around this element. Since HTML has a default margin value, we set margin to 0 to bypass it: set margin to 0 on all sides*/
+    padding: 20px 0; /*this refers to the extra space within the element. here we set the top and bottom padding to 20 pixels and the left and right padding to 0 pixels*/
+    color: rgb(0, 0, 0); /*set text color to black*/
+    text-shadow: 5px 5px 1px rgb(255, 0, 0); /*add a text shadow and set: offset-x to 5 pixels, offset-y to 5 pixels, the blur to 1 pixel and the color of the shadow to red*/ 
+}
+/*we can style multiple elements at the time by using commas as such*/ 
+p, li { /*style paraghrap and list elements as such*/
+    font-size: 16px; /*set font-size to 16px*/
+    line-height: 2; /*line height is the space between lines in a piece of text. in this case we use a unitless number(2) which will be multiplied by the elements font-size(16). This is done to prevent unwanted results due to inheritance,whatever that may be*/
+    letter-spacing: 1px; /*set the distance between each letter in these elements to 1 pixel*/
+}
+/*the body is also its own element, that means it's its own box.*/
+body { /*style the body as such*/
+    background-color: rgb(102, 102, 109); /*set background color to the color specified, in this case to grey*/
+    width: 600px; /*set body to always be 600 pixels wide*/
+    margin: 0 auto; /*set area around the element to the following values: top and bottom to 0 and let left and right sides automativally ajust to the size of the page*/
+    padding: 0 20px 20px 20px; /*set area between the border of the element and its contents to the followin values: distance from the top border to 0 pixels, distance form the rigth border to 20 pixels, distance from the bottom border to 20 pixels and distance form the left border to 20 pixels*/
+    border: 5px solid rgb(255, 255, 255); /*set the border of this element to the  following values: 5 pixels wide on all sides, and make the line solid black*/
+}
+/* We want the image to be centered*/
+img { /*style all img elements as follows*/
+    display: block; /*we separate the img from the body by giving it block-level behaiviour. this way the margins we apply to it will be respected by other elements on the page*/
+    margin: 0 auto; /*we center the image with the page by seting the top  and bottom margins to 0 and setting left and rigth to automatically adjust according to the page*/
+}
+/* gave the image an id to mess around with it*/
+#obito { /*style id as follows*/
+    border: 5px solid #000; /*set border 5 pixels wide, make it solid and change color to black*/
+    border-radius: 50%; /*gives the image a round defitinion*/
+
+}
+/* change the color of the link to red when i hover over it*/
+a:hover { /*style the following element as follows : but only when we hover over it*/
+    color: red; /*set color to red*/
+}
